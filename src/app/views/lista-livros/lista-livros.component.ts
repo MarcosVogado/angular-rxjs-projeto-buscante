@@ -16,7 +16,7 @@ export class ListaLivrosComponent {
 
   buscarLivros() {
     this.service.buscar(this.campoBusca).subscribe({
-      next: retornoAPI => console.log(retornoAPI)
+      next: retornoAPI => console.log(retornoAPI), error: erro => console.error(erro)
     })
     
   }
