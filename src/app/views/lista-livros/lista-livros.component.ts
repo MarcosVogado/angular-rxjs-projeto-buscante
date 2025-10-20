@@ -22,10 +22,9 @@ export class ListaLivrosComponent {
       tap(() => console.log('Fluxo inicial')),
       switchMap((valorDigitado) => this.service.buscar(valorDigitado)),
       tap(() => console.log('Requisições ao servidor')),
-        map((items) => {
-          this.livrosResultadoParaLivros(items)
-        }, 
-      )
+      map((items) => {
+        return this.livrosResultadoParaLivros(items)
+      })
     )
 
   livrosResultadoParaLivros(items: Item[]): LivroVolumeInfo[] {
