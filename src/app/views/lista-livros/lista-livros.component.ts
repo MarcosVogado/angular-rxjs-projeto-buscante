@@ -5,7 +5,7 @@ import { Item, LivrosResultado } from 'src/app/models/interfaces';
 import { LivroVolumeInfo } from 'src/app/models/LivroVolumeInfo';
 import { LivroService } from 'src/app/service/livro.service';
 
-  const pausa = 400;
+  const pausa = 300;
 
 @Component({
   selector: 'app-lista-livros',
