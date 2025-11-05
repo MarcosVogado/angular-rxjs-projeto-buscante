@@ -4,9 +4,9 @@ export const listStateTrigger = trigger('listState', [
   transition('* => *', [
     // entrada
     query(':enter', [
-      style({ opacity: 0, transform: 'translateY(-100%)' }),
+      style({ opacity: 0, transform: 'translateY(-35%)' }),
       stagger(200, [
-        animate('500ms ease-in', keyframes([
+        animate('400ms ease-in', keyframes([
           style({ opacity: 1, transform: 'translateY(-10%)', offset: 0.4 }),
           style({ opacity: 1, transform: 'translateY(0)', offset: 1 })
         ]))
@@ -15,7 +15,7 @@ export const listStateTrigger = trigger('listState', [
     // saída
     query(':leave', [
       stagger(200, [
-        animate('400ms ease-in', style({ opacity: 0, transform: 'translateY(-100%)' }))
+        animate('400ms ease-in', style({ opacity: 0, transform: 'translateY(-10%)' }))
       ])
     ], { optional: true })
   ])
