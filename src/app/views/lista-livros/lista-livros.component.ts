@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { catchError, debounceTime, distinctUntilChanged, filter, map, of, switchMap, tap, throwError } from 'rxjs';
+import { listStateTrigger } from 'src/app/animations';
 import { Item, LivrosResultado } from 'src/app/models/interfaces';
 import { LivroVolumeInfo } from 'src/app/models/LivroVolumeInfo';
 import { LivroService } from 'src/app/service/livro.service';
@@ -10,7 +11,10 @@ import { LivroService } from 'src/app/service/livro.service';
 @Component({
   selector: 'app-lista-livros',
   templateUrl: './lista-livros.component.html',
-  styleUrls: ['./lista-livros.component.css']
+  styleUrls: ['./lista-livros.component.css'],
+  animations: [
+    listStateTrigger
+  ]
 })
 
 export class ListaLivrosComponent {
